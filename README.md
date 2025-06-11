@@ -1,6 +1,6 @@
 # Log Analysis Scripts
 
-This project provides standalone Python scripts for analyzing web server logs. Each script is self-contained and focused on a specific type of analysis. You do **not** need to use or reference any shared module—all logic is included in each script.
+This project provides standalone Python scripts for analyzing web server logs. Each script is self-contained and focused on a specific type of analysis.
 
 **All script outputs are in JSON format, making them easy to ingest by other systems, tools, or for further automation and visualization.**
 
