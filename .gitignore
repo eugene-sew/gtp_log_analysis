@@ -2,3 +2,4 @@
 __pycache__
 log_analyzer.py
 logger.py
+log_explorer.py

@@ -112,8 +112,8 @@ def requests_per_ip_10sec_window(logs: list[str]):
     for ip, timestamps in ip_timestamps.items():
         window_start = timestamps[0]
         window_end = window_start + datetime.timedelta(seconds=10)
-        # Count requests within the window (including the first request)
-        requests_within_window_count = sum(1 for timestamp in timestamps if timestamp <= window_end)
+        # Count requests within the window (excluding the first request)
+        requests_within_window_count = sum(1 for timestamp in timestamps if timestamp <= window_end and timestamp != window_start)
         result[ip] = {
             "window_start": window_start.isoformat(),
             "requests_within_window": requests_within_window_count,
